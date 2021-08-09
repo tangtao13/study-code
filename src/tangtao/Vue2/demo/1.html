@@ -1,0 +1,33 @@
+<!--
+ * @Author: myname
+ * @Date: 2021-08-09 08:48:35
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2021-08-09 08:50:32
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">{{ todo.text }}</li>
+            </ol>
+        </div>
+        <script>
+            const app = new Vue({
+                el: '#app-4',
+                data: function () {
+                    return {
+                        todos: [{text: '学习 JavaScript'}, {text: '学习 Vue'}, {text: '整个牛项目'}],
+                    };
+                },
+            });
+        </script>
+    </body>
+</html>
